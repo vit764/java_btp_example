@@ -1,0 +1,26 @@
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.schema-locations: classpath:schema-h2.sql
+cds:
+  datasource:
+    auto-config.enabled: false
+  security:
+    mock:
+      users:
+        - name: klaus
+          password: pass
+          additional:
+            firstName: Klaus
+            lastName: Sussard
+            email: Klaus.Sussard@mail.com
+        - name: mia
+          password: pass
+          roles:
+            - Administrators
+          additional:
+            firstName: Mia
+            lastName: Bonnellac
+            email: Mia.Bonnellac@mail.com
+
